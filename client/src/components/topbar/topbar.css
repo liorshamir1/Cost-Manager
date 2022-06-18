@@ -1,0 +1,53 @@
+.top {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+
+}
+
+.fab{
+  padding: 10px;
+}
+.nav-item{
+  background-color: rgb(164, 188, 196);
+  padding: 10px;
+}
+.navbar{
+  background-color: rgb(164, 188, 196);
+   width: 100%;
+  height: 90px;  
+  font-family: "Josefin Sans", sans-serif;
+  position: sticky;
+  padding: 20px;
+  color: black;
+  top: 0;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+}
+
+
+
+.topIcon {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #444;
+  cursor: pointer;
+}
+
+
+
+
+
+.topImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+

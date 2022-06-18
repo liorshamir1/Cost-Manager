@@ -1,0 +1,11 @@
+
+.cost {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    display: inline-block;
+}
+.costTitle{
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 30px;
+}

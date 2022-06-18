@@ -1,0 +1,67 @@
+.singleCost {
+    flex: 9;
+  overflow: hidden;
+  }
+  
+  .singleCostWrapper {
+    padding: 20px;
+    padding-right: 0;
+  }
+  
+  .singleCostImg {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  
+  .singleCostTitle {
+    text-align: center;
+    margin: 10px;
+    font-size: 28px;
+    font-family: "Lora", sans-serif;
+  }
+  
+  .singleCostEdit {
+    float: right;
+    font-size: 16px;
+  }
+  
+  .singleCostIcon {
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .singleCostIcon:first-child {
+    color: teal;
+  }
+  .singleCostIcon:last-child {
+    color: tomato;
+  }
+  
+  .singleCostInfo {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #be9656;
+    font-family: "Varela Round", Arial, Helvetica, sans-serif;
+  }
+  
+  .singleCostAuthor{
+    margin-left: 5px;
+  }
+  
+  .singleCostDesc {
+    color: #666;
+    font-size: 18px;
+    line-height: 25px;
+    overflow: auto;
+    
+  }
+  
+  .singleCostDesc::first-letter {
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: 600;
+  }
