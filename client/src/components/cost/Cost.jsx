@@ -13,6 +13,8 @@ export default function Cost({ cost }) {
       {new Date(cost.createdAt).toDateString()}
     </span>
     <p>{cost.username}</p><br></br>
+    <p>{cost.category}</p><br></br>
+    <p>{cost.sum}</p><br></br>
     <Link to={`/cost/${cost._id}`} className="link">
     צפה בפעולה
     </Link>

@@ -7,6 +7,7 @@ import { Context } from "../../context/Context";
 export default function Write() {
   const [sum, setSum] = useState(0);
   const [description, setDesc] = useState("");
+  const [category, setcategory] = useState("");
   const { user } = useContext(Context);
 
   const handleSubmit = async (e) => {
@@ -15,6 +16,7 @@ export default function Write() {
       username: user.username,
       sum,
       description,
+      category
     };
     try {
       const res = await axiosInstance.post("/costs", newcost);
@@ -42,6 +44,13 @@ export default function Write() {
               className="writeInput"
               autoFocus={true}
               onChange={e => setDesc(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="category"
+              className="writeInput"
+              autoFocus={true}
+              onChange={e => setcategory(e.target.value)}
             />
           </div>
           <button className="writeSubmit" type="submit">

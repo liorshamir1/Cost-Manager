@@ -12,6 +12,7 @@ export default function SingleCost() {
   const { user } = useContext(Context);
   const [sum, setSum] = useState(0);
   const [description, setdescription] = useState("");
+  const [category, setcategory] = useState("");
   const [updateMode, setUpdateMode] = useState(false);
 
   useEffect(() => {
@@ -20,6 +21,7 @@ export default function SingleCost() {
       setCost(res.data);
       setSum(res.data.sum);
       setdescription(res.data.description);
+      setcategory(res.data.category);
     };
     getCost();
   }, [path]);
@@ -39,6 +41,7 @@ export default function SingleCost() {
         username: user.username,
         description,
         sum,
+        category
       });
       setUpdateMode(false)
     } catch (err) {}
@@ -91,6 +94,7 @@ export default function SingleCost() {
            autoFocus
            onChange={(e) => setdescription(e.target.value)}
          />
+         
         ) : (
           <p className="singleCostdescription">{description}</p>
         )}
