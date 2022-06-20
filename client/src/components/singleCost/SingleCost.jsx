@@ -78,7 +78,7 @@ export default function SingleCost() {
         <div className="singleCostInfo">
           <span className="singleCostAuthor">
             Author:
-            <Link to={`/?user=${cost.username}`} className="link">
+            <Link to={`/?users=${cost.username}`} className="link">
               <b> {cost.username}</b>
             </Link>
           </span>

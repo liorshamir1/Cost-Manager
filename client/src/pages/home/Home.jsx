@@ -1,28 +1,35 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Header from "../../components/header/Header";
 import Costs from "../../components/costs/Costs";
 import "./home.css";
-import {axiosInstance} from "../../config";
+import { Context } from "../../context/Context";
+
+import { axiosInstance } from "../../config";
 import { useLocation } from "react-router";
 
 export default function Home() {
+  const { user } = useContext(Context);
   const [costs, setCosts] = useState([]);
-  const { search } = useLocation();
-
+  const location = useLocation();
   useEffect(() => {
     const fetchCosts = async () => {
-      const res = await axiosInstance.get("/costs" + search);
+      if (user === null) {
+        window.location.replace("/login")
+      }
+      else {
+       var  res = await axiosInstance.get(`/costs?user=${user.username}`);
+      }
       setCosts(res.data);
     };
     fetchCosts();
-  }, [search]);
+  }, []);
   return (
     <>
       <Header />
       <div className="home">
-        <Costs costs={costs} />     
+        <Costs costs={costs} />
       </div>
-    
+
 
     </>
   );
