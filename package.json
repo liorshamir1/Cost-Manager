@@ -1,0 +1,15 @@
+{
+    "name": "expense-manager",
+    "version": "1.0.0",
+    "description": "cost-app hit project",
+    "main": "index.js",
+    "scripts": {
+      "start": "npm start --prefix backend",
+      "client": "cd frontend && npm start",
+      "dev": "cd backend && npm run start && cd frontend && npm start",
+      "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm install --prefix backend && npm run build --prefix frontend ",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Tal Sagie and Oz",
+    "license": "ISC"
+  }
