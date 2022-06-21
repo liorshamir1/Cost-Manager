@@ -79,7 +79,6 @@ router.get("/", async (req, res) => {
     costsObj = await Cost.find({
       username
     })
-    //console.log(costs.length);
     for (let index = 0; index < costsObj.length; index++) {
       costs.push(costsObj[index])
     }
@@ -97,8 +96,7 @@ router.get("/", async (req, res) => {
 
       sum += (+element._doc.sum)
     });
-    console.log(sum)
-    res.status(200).json({
+        res.status(200).json({
         "costs": costs,
         "sum": sum
       }

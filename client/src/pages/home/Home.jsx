@@ -48,13 +48,11 @@ export default function Home() {
           <label>category</label>
           <input
             type="category"
-            placeholder={user.category}
             onChange={(e) => setcategory(e.target.value)}
           />
           <label>year</label>
           <input
             type="date.year"
-            placeholder={user.year}
             onChange={(e) => setyear(e.target.value)}
           />
           <label>month</label>

@@ -6,6 +6,7 @@ var cors = require('cors');
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
 const costRoute = require("./routes/cost");
+const path = require("path");
 const port = 5000
 
 dotenv.config();
@@ -25,9 +26,12 @@ app.use("/auth", authRoute);
 app.use("/users", userRoute);
 app.use("/costs", costRoute);
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-})
+app.use(express.static(path.resolve(__dirname, './build2')));
+
+app.get('*', function (req, res) {
+  const index = path.join(__dirname,'build2', 'index.html');
+  res.sendFile(index);
+});
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
