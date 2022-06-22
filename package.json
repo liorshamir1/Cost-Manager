@@ -10,6 +10,6 @@
       "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm install --prefix backend && npm run build --prefix frontend ",
       "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": "Tal Sagie and Oz",
+    "author": "yosef shaul, shilo sharabi",
     "license": "ISC"
   }
