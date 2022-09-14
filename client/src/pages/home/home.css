@@ -25,6 +25,7 @@
   touch-action: manipulation;
   margin-top: 20px;
   padding-top: 15px;
+  margin-left: 10px;
   }
   
   .btn:before {
