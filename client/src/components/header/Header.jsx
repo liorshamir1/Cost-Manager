@@ -5,12 +5,11 @@ export default function Header() {
     <div className="header">
       <div className="headerTitles">
        
-        <span className="headerTitleLg">cost manager</span>
+        <span className="headerTitleLg">My Cost Manager</span>
       </div>
       <img
         className="headerImg"
-        src="https://images1.ynet.co.il/picserver5/crop_images/2020/04/02/9887566/9887566_0_45_980_552_0_large.jpg"
-        alt=""
+        src="https://www.migso-pcubed.com/wp-content/uploads/2022/03/towfiqu-barbhuiya-nApaSgkzaxg-unsplash-scaled-1200x675.jpg"
       />
     </div>
   );

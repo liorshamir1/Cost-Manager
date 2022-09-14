@@ -26,8 +26,9 @@
   .registerInput {
     padding: 10px;
     background-color: white;
-    border: none;
     border-radius: 10px;
+    border-top-style: hidden;
+    border-style: ridge;
   }
   
   .registerInput:focus {

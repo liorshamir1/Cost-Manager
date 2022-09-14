@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import Header from "../../components/header/Header";
+import { Link } from "react-router-dom";
 import Costs from "../../components/costs/Costs";
 import "./home.css";
 import { Context } from "../../context/Context";
@@ -17,21 +18,22 @@ export default function Home() {
   const location = useLocation();
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(month)
-    var res = await axiosInstance.get(`/costs?user=${user.username}&category=${category}&month=${month}&year=${year}`);
-    setSum(res.data.sum)
-    console.log(res.data.costs)
+    console.log(month);
+    var res = await axiosInstance.get(
+      `/costs?user=${user.username}&category=${category}&month=${month}&year=${year}`
+    );
+    setSum(res.data.sum);
+    console.log(res.data.costs);
     setCosts(res.data.costs);
   };
   useEffect(() => {
     const fetchCosts = async () => {
       if (user === null) {
-        window.location.replace("/login")
-      }
-      else {
+        window.location.replace("/login");
+      } else {
         var res = await axiosInstance.get(`/costs?user=${user.username}`);
       }
-      setSum(res.data.sum)
+      setSum(res.data.sum);
       setCosts(res.data.costs);
     };
     fetchCosts();
@@ -39,9 +41,13 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <div>
-      </div>
       <div className="home">
+        <Link className="btn" to="/write">
+          ADD NEW COST
+        </Link>
+      </div>
+
+      {/* <div className="home">
         <Costs costs={costs} />
         <div >TOTAL COSTS :{sum}</div>
         <form className="settingsForm" onSubmit={handleSubmit}>
@@ -74,7 +80,7 @@ export default function Home() {
             Update
           </button>
         </form>
-      </div>
+      </div> */}
     </div>
   );
 }

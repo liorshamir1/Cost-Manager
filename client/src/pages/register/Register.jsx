@@ -1,4 +1,4 @@
-import {axiosInstance} from "../../config";
+import { axiosInstance } from "../../config";
 import { useState } from "react";
 import "./register.css";
 
@@ -23,7 +23,7 @@ export default function Register() {
         first_name,
         last_name,
         marital_status,
-        birthday
+        birthday,
       });
       res.data && window.location.replace("/login");
     } catch (err) {
@@ -38,56 +38,60 @@ export default function Register() {
         <input
           type="text"
           className="registerInput"
-          placeholder="Enter your username..."
+          placeholder="Enter Username"
           onChange={(e) => setUsername(e.target.value)}
         />
         <label>Email</label>
         <input
           type="email"
           className="registerInput"
-          placeholder="Enter your email..."
+          placeholder="Enter Email"
           onChange={(e) => setEmail(e.target.value)}
         />
         <label>Password</label>
         <input
           type="password"
           className="registerInput"
-          placeholder="Enter your password..."
+          placeholder="Enter password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <label>first_name</label>
+        <label>first Name</label>
         <input
           type="text"
           className="registerInput"
-          placeholder="Enter your first_name..."
+          placeholder="Enter your first name"
           onChange={(e) => setfirst_name(e.target.value)}
         />
-             <label>last_name</label>
+        <label>Last Name</label>
         <input
           type="text"
           className="registerInput"
-          placeholder="Enter your last_name..."
+          placeholder="Enter your last name"
           onChange={(e) => setlast_name(e.target.value)}
         />
-        <label>marital_status</label>
+        <label>Marital Status</label>
         <input
           type="text"
           className="registerInput"
-          placeholder="Enter your marital_status..."
+          placeholder="Enter your marital status"
           onChange={(e) => setmarital_status(e.target.value)}
         />
-        <label>birthday</label>
+        <label>Date Of Birth</label>
         <input
           type="Date"
           className="registerInput"
-          placeholder="Enter your birthday..."
+          placeholder="Enter your birthday"
           onChange={(e) => setbirthday(e.target.value)}
         />
         <button className="registerButton" type="submit">
           Register
         </button>
       </form>
-      {error && <span style={{color:"red", marginTop:"10px"}}>Something went wrong!</span>}
+      {error && (
+        <span style={{ color: "red", marginTop: "10px" }}>
+          Something went wrong!
+        </span>
+      )}
     </div>
   );
 }

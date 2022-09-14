@@ -1,45 +1,77 @@
 .login {
     height: calc(100vh - 50px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+    margin:auto;
+    text-align: center;
+    margin-top: 40px;
+    position:relative;
+    background-image:url("https://fulisbutik.com/wp-content/uploads/2019/01/login-background-images-for-website-10.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+}
   
   .loginTitle {
-    font-size: 50px;
+    font-size: 65px;
+    color: rgb(28, 190, 223);
+    font-weight: bold;
   }
   
   .loginForm {
-    margin-top: 20px;
+    margin-top: 25px;
     display: flex;
     flex-direction: column;
   }
   
   .loginForm > label {
     margin: 10px 0;
+    font-weight: bold;
+    color: white;
   }
   
   .loginInput {
     padding: 10px;
     background-color: white;
     border: none;
+    align-self: center;
     border-radius: 10px;
+    width: 15%;
   }
   
   .loginInput:focus {
-    outline: none;
+    outline: lightgray;
   }
   
   .loginButton {
-    margin-top: 20px;
+    margin-top: 40px;
     cursor: pointer;
-    background-color: lightcoral;
+    background-color: rgb(28, 190, 223);
     color: white;
     padding: 10px;
     border: none;
     border-radius: 10px;
     text-align: center;
+    padding: 10px;
+    align-self: center;
+    border-radius: 30px;
+    width: 5%;
+    font-weight: bold;
+  }
+  .loginButton:hover {
+    margin-top: 40px;
+    cursor: pointer;
+    background-color: rgb(28, 190, 223);
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    align-self: center;
+    border-radius: 30px;
+    width: 5%;
+    font-weight: bold;
   }
   
   .loginRegisterButton {
@@ -111,3 +143,4 @@
     border-radius: 10px;
   }
   }
+  
