@@ -8,7 +8,7 @@ export default function About() {
         <div className="sidebarItem">
           <span className="sidebarTitle">ABOUT </span>
           <p>  
-          yosef shaul, shilo sharabi
+          yosef shaul, lior shamir
           </p>
         </div>
         <div className="sidebarItem">

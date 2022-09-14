@@ -28,10 +28,10 @@ app.use("/costs", costRoute);
 
 app.use(express.static(path.resolve(__dirname, './build2')));
 
-app.get('*', function (req, res) {
-  const index = path.join(__dirname,'build2', 'index.html');
-  res.sendFile(index);
-});
+// app.get('*', function (req, res) {
+//   const index = path.join(__dirname,'build2', 'index.html');
+//   res.sendFile(index);
+// });
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
