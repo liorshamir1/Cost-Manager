@@ -24,10 +24,6 @@ const UserSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    marital_status: {
-      type: String,
-      required: true,
-    },
     birthday: {
       type: Date,
       required: true,

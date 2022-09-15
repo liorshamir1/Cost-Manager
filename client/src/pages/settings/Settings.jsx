@@ -35,8 +35,7 @@ export default function Settings() {
   return (
     <div className="settings">
       <div className="settingsWrapper">
-        <div className="settingsTitle">
-        </div>
+        <div className="settingsTitle"></div>
         <form className="settingsForm" onSubmit={handleSubmit}>
           <label>Username</label>
           <input
@@ -87,12 +86,11 @@ export default function Settings() {
             <span
               style={{ color: "green", textAlign: "center", marginTop: "20px" }}
             >
-              Profile has been updated...
+              Profile has been updated
             </span>
           )}
         </form>
       </div>
-
     </div>
   );
 }

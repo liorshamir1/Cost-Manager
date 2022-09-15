@@ -1,12 +1,8 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import Header from "../../components/header/Header";
 import { Link } from "react-router-dom";
-import Costs from "../../components/costs/Costs";
 import "./home.css";
 import { Context } from "../../context/Context";
-
-import { axiosInstance } from "../../config";
-import { useLocation } from "react-router";
 
 export default function Home() {
   const { user } = useContext(Context);
@@ -18,7 +14,7 @@ export default function Home() {
       }
     };
     fetchCosts();
-  }, []);
+  }, [user]);
   return (
     <div>
       <Header />

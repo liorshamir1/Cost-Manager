@@ -16,6 +16,14 @@
     flex-direction: column;
     align-items: center;
   }
+
+  .aboutusImg{
+    width: 100%;
+    height: 400px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    object-fit: cover;
+  }
   
   .sidebarTitle {
     margin: 10px;
