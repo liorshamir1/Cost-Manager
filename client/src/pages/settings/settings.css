@@ -2,7 +2,7 @@
   margin:auto;
   text-align: center;
   position:relative;
-  background-image:url("https://static.vecteezy.com/system/resources/previews/002/952/436/large_2x/stock-market-investment-trading-financial-coin-and-graph-chart-or-forex-for-analyze-profit-finance-business-trend-data-background-free-photo.jpg");
+  background-image:url("https://static.vecteezy.com/system/resources/previews/002/096/358/original/account-settings-edit-profile-linear-icon-eps-vector.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
@@ -11,7 +11,7 @@
   }
   .Title{
     font-size: 50px;
-    color: black;
+    color: #0078d0;
     font-weight: bold;
   }
   .settingsTitle {
