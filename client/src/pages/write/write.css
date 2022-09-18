@@ -1,13 +1,14 @@
 .write {
-  height: calc(100vh - 150px);
+  height: 750px;
   margin:auto;
   text-align: center;
   position:relative;
-  background-image:url("https://www.bondora.com/blog/wp-content/uploads/saving-money.png");
+  background-image:url("https://c8.alamy.com/comp/2G87KG7/spend-money-spend-all-your-money-illiterately-the-dollar-bill-turns-to-ash-dissolves-against-a-black-background-place-for-text-2G87KG7.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
   width: 100%;
+  padding-top: 5px;
   }
   
 .container-fluid{
