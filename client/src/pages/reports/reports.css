@@ -1,0 +1,91 @@
+.report{
+    margin:auto;
+    text-align: center;
+    position:relative;
+    background-image:url("https://static.vecteezy.com/system/resources/previews/002/952/436/large_2x/stock-market-investment-trading-financial-coin-and-graph-chart-or-forex-for-analyze-profit-finance-business-trend-data-background-free-photo.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    width: 100%;
+    height: 810px;
+}
+.reportTitle {
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+  }
+.reportForm {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+.reportForm > label {
+    margin: 10px 0;
+    font-weight: bold;
+    color: white;
+}
+.reportForm > input {
+    padding: 10px;
+    background-color: white;
+    border: none;
+    align-self: center;
+    border-radius: 10px;
+    width: 15%;
+  }
+  .reportForm > select {
+    padding: 10px;
+    background-color: white;
+    border: none;
+    align-self: center;
+    border-radius: 10px;
+    width: 15%;
+  }
+  
+  .reportForm > input:focus {
+    outline: lightgray;
+  }
+  .btnReport{
+    background-color: #0078d0;
+    border: 0;
+    border-radius: 56px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    outline: 0;
+    padding: 16px 21px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: 20px;
+    padding-top: 15px;
+    margin-left: 10px;
+    width: 10%;
+    align-self: center;
+    }
+    
+    .btnReport:before {
+      background-color: initial;
+      background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+      border-radius: 125px;
+      content: "";
+      height: 50%;
+      left: 4%;
+      opacity: .5;
+      position: absolute;
+      top: 0;
+      transition: all .3s;
+      width: 92%;
+    }
+    
+    .btnReport:hover {
+      box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+      transform: scale(1.05);
+      color:gray;
+    }

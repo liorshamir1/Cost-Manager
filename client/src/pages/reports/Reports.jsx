@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import Costs from "../../components/costs/Costs";
 import { Context } from "../../context/Context";
 import { axiosInstance } from "../../config";
+import "../reports/reports.css";
 
 export default function Reports() {
   const { user } = useContext(Context);
@@ -22,15 +23,18 @@ export default function Reports() {
   };
 
   return (
-    <div className="home">
+    <div className="report">
       <Costs costs={costs} />
-      <div>TOTAL COSTS :{sum}</div>
-      <form className="settingsForm" onSubmit={handleSubmit}>
-        <label>category</label>
+      <span className="reportTitle">
+        Total Costs:
+        {sum}
+      </span>
+      <form className="reportForm" onSubmit={handleSubmit}>
+        <label>Category</label>
         <input type="category" onChange={(e) => setcategory(e.target.value)} />
-        <label>year</label>
+        <label>Year</label>
         <input type="date.year" onChange={(e) => setyear(e.target.value)} />
-        <label>month</label>
+        <label>Month</label>
         <select id="drp1" onChange={(e) => setmonth(e.target.value)}>
           <option value="Jan">January</option>
           <option value="Feb">February</option>
@@ -45,8 +49,8 @@ export default function Reports() {
           <option value="Nov">November</option>
           <option value="Dec">December</option>
         </select>
-        <button className="settingsSubmit" type="submit">
-          Update
+        <button className="btnReport" type="submit">
+          Get Report
         </button>
       </form>
     </div>

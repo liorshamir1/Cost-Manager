@@ -34,63 +34,53 @@ export default function Settings() {
   };
   return (
     <div className="settings">
-      <div className="settingsWrapper">
-        <div className="settingsTitle"></div>
-        <form className="settingsForm" onSubmit={handleSubmit}>
-          <label>Username</label>
-          <input
-            type="text"
-            placeholder={user.username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-          <label>Email</label>
-          <input
-            type="email"
-            placeholder={user.email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <label>Password</label>
-          <input
-            type="password"
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <label>first_name</label>
-          <input
-            type="first_name"
-            placeholder={user.first_name}
-            onChange={(e) => setfirst_name(e.target.value)}
-          />
-          <label>last_name</label>
-          <input
-            type="last_name"
-            placeholder={user.last_name}
-            onChange={(e) => setlast_name(e.target.value)}
-          />
-          <label>marital_status</label>
-          <input
-            type="marital_status"
-            placeholder={user.marital_status}
-            onChange={(e) => setmarital_status(e.target.value)}
-          />
-          <label>birthday</label>
-          <input
-            type="date"
-            placeholder={user.birthday}
-            onChange={(e) => setbirthday(e.target.value)}
-          />
+      <div className="Title">My accout</div>
+      <div className="settingsTitle"></div>
+      <form className="settingsForm" onSubmit={handleSubmit}>
+        <label>Username</label>
+        <input
+          type="text"
+          placeholder={user.username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+        <label>Email</label>
+        <input
+          type="email"
+          placeholder={user.email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <label>Password</label>
+        <input type="password" onChange={(e) => setPassword(e.target.value)} />
+        <label>First name</label>
+        <input
+          type="first_name"
+          placeholder={user.first_name}
+          onChange={(e) => setfirst_name(e.target.value)}
+        />
+        <label>Last name</label>
+        <input
+          type="last_name"
+          placeholder={user.last_name}
+          onChange={(e) => setlast_name(e.target.value)}
+        />
+        <label>Day of birth</label>
+        <input
+          type="date"
+          placeholder={user.birthday}
+          onChange={(e) => setbirthday(e.target.value)}
+        />
 
-          <button className="settingsSubmit" type="submit">
-            Update
-          </button>
-          {success && (
-            <span
-              style={{ color: "green", textAlign: "center", marginTop: "20px" }}
-            >
-              Profile has been updated
-            </span>
-          )}
-        </form>
-      </div>
+        <button className="btnUpdate" type="submit">
+          Update
+        </button>
+        {success && (
+          <span
+            style={{ color: "green", textAlign: "center", marginTop: "20px" }}
+          >
+            Profile has been updated
+          </span>
+        )}
+      </form>
     </div>
   );
 }
