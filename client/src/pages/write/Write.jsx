@@ -2,12 +2,14 @@ import { useContext, useState } from "react";
 import "./write.css";
 import { axiosInstance } from "../../config";
 import { Context } from "../../context/Context";
+import CustomPopUp from "./../popup/CustomPopUp";
 
 export default function Write() {
   const [sum, setSum] = useState(0);
   const [description, setDesc] = useState("");
   const [category, setcategory] = useState("");
   const { user } = useContext(Context);
+  const [success, setSuccess] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,7 +21,11 @@ export default function Write() {
     };
     try {
       const res = await axiosInstance.post("/costs", newcost);
-      window.location.replace("/cost/" + res.data._id);
+      setSuccess(true);
+      document.getElementById("Category").value = "";
+      document.getElementById("Sum").value = "";
+      document.getElementById("Description").value = "";
+      // window.location.replace("/cost/" + res.data._id);
     } catch (err) {
       window.alert("you need to add: sum ,description");
     }
@@ -33,6 +39,7 @@ export default function Write() {
             <input
               type="text"
               placeholder="Category"
+              id="Category"
               className="writeInput"
               autoFocus={true}
               onChange={(e) => setcategory(e.target.value)}
@@ -40,6 +47,7 @@ export default function Write() {
             <input
               type="number"
               placeholder="Sum"
+              id="Sum"
               className="writeInput"
               autoFocus={true}
               onChange={(e) => setSum(e.target.value)}
@@ -47,6 +55,7 @@ export default function Write() {
             <input
               type="text"
               placeholder="Description"
+              id="Description"
               className="writeInput"
               autoFocus={true}
               onChange={(e) => setDesc(e.target.value)}
@@ -56,6 +65,14 @@ export default function Write() {
             Add to list
           </button>
         </form>
+        {success && (
+          <CustomPopUp
+            title={"הודעת מערכת"}
+            body={"הפעולה נכנסה לסך ההוצאות שלך"}
+            show={success}
+            setShow={setSuccess}
+          />
+        )}
       </div>
     </div>
   );

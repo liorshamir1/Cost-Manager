@@ -1,7 +1,8 @@
 import "./settings.css";
-import { useContext, useState } from "react";
+import { React, useContext, useState } from "react";
 import { Context } from "../../context/Context";
 import { axiosInstance } from "../../config";
+import CustomPopUp from "./../popup/CustomPopUp";
 
 export default function Settings() {
   const [username, setUsername] = useState("");
@@ -34,7 +35,7 @@ export default function Settings() {
   };
   return (
     <div className="settings">
-      <div className="Title">My accout</div>
+      <div className="Title">My Profile</div>
       <div className="settingsTitle"></div>
       <form className="settingsForm" onSubmit={handleSubmit}>
         <label>Username</label>
@@ -74,11 +75,12 @@ export default function Settings() {
           Update
         </button>
         {success && (
-          <span
-            style={{ color: "green", textAlign: "center", marginTop: "20px" }}
-          >
-            Profile has been updated
-          </span>
+          <CustomPopUp
+            title={"הודעת מערכת"}
+            body={"הפרופיל עודכן בהצלחה"}
+            show={success}
+            setShow={setSuccess}
+          />
         )}
       </form>
     </div>
