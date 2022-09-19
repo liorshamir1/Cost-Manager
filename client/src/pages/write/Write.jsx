@@ -10,6 +10,7 @@ export default function Write() {
   const [category, setcategory] = useState("");
   const { user } = useContext(Context);
   const [success, setSuccess] = useState(false);
+  const [bodyPopUp, setbodyPopUp] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,13 +22,15 @@ export default function Write() {
     };
     try {
       const res = await axiosInstance.post("/costs", newcost);
+      setbodyPopUp("הפעולה נכנסה לסך ההוצאות שלך");
       setSuccess(true);
       document.getElementById("Category").value = "";
       document.getElementById("Sum").value = "";
       document.getElementById("Description").value = "";
       // window.location.replace("/cost/" + res.data._id);
     } catch (err) {
-      window.alert("you need to add: sum ,description");
+      setbodyPopUp("יש למלא את כל השדות");
+      setSuccess(true);
     }
   };
   return (
@@ -68,7 +71,7 @@ export default function Write() {
         {success && (
           <CustomPopUp
             title={"הודעת מערכת"}
-            body={"הפעולה נכנסה לסך ההוצאות שלך"}
+            body={bodyPopUp}
             show={success}
             setShow={setSuccess}
           />
