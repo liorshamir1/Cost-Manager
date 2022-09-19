@@ -1,12 +1,14 @@
 import { axiosInstance } from "../../config";
-import { useContext, useRef } from "react";
+import { useContext, useRef, useState } from "react";
 import { Context } from "../../context/Context";
+import CustomPopUp from "./../popup/CustomPopUp";
 import "./login.css";
 
 export default function Login() {
   const userRef = useRef();
   const passwordRef = useRef();
   const { dispatch, isFetching } = useContext(Context);
+  const [show, setshow] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,6 +20,7 @@ export default function Login() {
       });
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
     } catch (err) {
+      setshow(true);
       dispatch({ type: "LOGIN_FAILURE" });
     }
   };
@@ -44,6 +47,14 @@ export default function Login() {
           Login
         </button>
       </form>
+      {show && (
+        <CustomPopUp
+          title={"הודעת מערכת"}
+          body={" שם משתמש או סיסמה שגויים"}
+          show={show}
+          setShow={setshow}
+        />
+      )}
     </div>
   );
 }
