@@ -1,6 +1,7 @@
 .singleCost {
-    flex: 9;
+  width: 22%;
   overflow: hidden;
+  background-color: aliceblue;
   }
   
   .singleCostWrapper {

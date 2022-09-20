@@ -1,16 +1,16 @@
 
 .cost {
-  margin-top: 25px;
+  margin: 5%;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
+  background-color: lightblue;
+  height: fit-content;
+  width: 18%;
 }
-.cost > p {
+.cost > div > span {
   margin: 10px 0;
   font-weight: bold;
-  color: black;
-}
-.cost > span {
-  margin: 10px 0;
   color: black;
 }
 .costTitle{
@@ -18,3 +18,32 @@
     color: #0078d0;
     font-weight: bold;
 }
+
+.btnCost{
+  background-color: #0078d0;
+  border: 0;
+  border-radius: 56px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  outline: 0;
+  padding: 10px 0px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 80%;
+  align-self: center;
+  }
+
+  .btnCost:hover {
+    box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+    transform: scale(1.05);
+    color:gray;
+  }

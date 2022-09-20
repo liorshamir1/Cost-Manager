@@ -25,34 +25,39 @@ export default function Reports() {
   return (
     <div className="report">
       <Costs costs={costs} />
-      <span className="reportTitle">
-        Total Costs:
-        {sum}
-      </span>
-      <form className="reportForm" onSubmit={handleSubmit}>
-        <label>Category</label>
-        <input type="category" onChange={(e) => setcategory(e.target.value)} />
-        <label>Year</label>
-        <input type="date.year" onChange={(e) => setyear(e.target.value)} />
-        <label>Month</label>
-        <select id="drp1" onChange={(e) => setmonth(e.target.value)}>
-          <option value="Jan">January</option>
-          <option value="Feb">February</option>
-          <option value="Mar">March</option>
-          <option value="Apr">April</option>
-          <option value="May">May</option>
-          <option value="Jun">June</option>
-          <option value="Jul">July</option>
-          <option value="Aug">August</option>
-          <option value="Sep">September</option>
-          <option value="Oct">October</option>
-          <option value="Nov">November</option>
-          <option value="Dec">December</option>
-        </select>
-        <button className="btnReport" type="submit">
-          Get Report
-        </button>
-      </form>
+      <div>
+        <span className="reportTitle">
+          Total Costs:
+          {sum}
+        </span>
+        <form className="reportForm" onSubmit={handleSubmit}>
+          <label>Category</label>
+          <input
+            type="category"
+            onChange={(e) => setcategory(e.target.value)}
+          />
+          <label>Year</label>
+          <input type="date.year" onChange={(e) => setyear(e.target.value)} />
+          <label>Month</label>
+          <select id="drp1" onChange={(e) => setmonth(e.target.value)}>
+            <option value="Jan">January</option>
+            <option value="Feb">February</option>
+            <option value="Mar">March</option>
+            <option value="Apr">April</option>
+            <option value="May">May</option>
+            <option value="Jun">June</option>
+            <option value="Jul">July</option>
+            <option value="Aug">August</option>
+            <option value="Sep">September</option>
+            <option value="Oct">October</option>
+            <option value="Nov">November</option>
+            <option value="Dec">December</option>
+          </select>
+          <button className="btnReport" type="submit">
+            Get Report
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import {axiosInstance} from "../../config";
+import { axiosInstance } from "../../config";
 import { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
@@ -41,9 +41,9 @@ export default function SingleCost() {
         username: user.username,
         description,
         sum,
-        category
+        category,
       });
-      setUpdateMode(false)
+      setUpdateMode(false);
     } catch (err) {}
   };
 
@@ -60,7 +60,7 @@ export default function SingleCost() {
           />
         ) : (
           <h1 className="singleCostTitle">
-            {sum}
+            Sum: {sum}
             {cost.username === user?.username && (
               <div className="singleCostEdit">
                 <i
@@ -87,16 +87,15 @@ export default function SingleCost() {
           </span>
         </div>
         {updateMode ? (
-           <input
-           type="text"
-           value={description}
-           className="singleCostdescriptionInput"
-           autoFocus
-           onChange={(e) => setdescription(e.target.value)}
-         />
-         
+          <input
+            type="text"
+            value={description}
+            className="singleCostdescriptionInput"
+            autoFocus
+            onChange={(e) => setdescription(e.target.value)}
+          />
         ) : (
-          <p className="singleCostdescription">{description}</p>
+          <p className="singleCostdescription">Description: {description}</p>
         )}
         {updateMode && (
           <button className="singleCostButton" onClick={handleUpdate}>
