@@ -12,9 +12,9 @@ export default function Reports() {
   const [year, setyear] = useState("");
   const [month, setmonth] = useState("");
 
+  // Sends a request to the server for issuing reports according to filters
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(month);
     var res = await axiosInstance.get(
       `/costs?user=${user.username}&category=${category}&month=${month}&year=${year}`
     );

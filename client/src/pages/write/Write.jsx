@@ -12,6 +12,7 @@ export default function Write() {
   const [show, setshow] = useState(false);
   const [bodyPopUp, setbodyPopUp] = useState(false);
 
+  // Sends a request to the server to create a new record
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newcost = {

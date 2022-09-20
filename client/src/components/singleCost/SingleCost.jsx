@@ -26,6 +26,7 @@ export default function SingleCost() {
     getCost();
   }, [path]);
 
+  // Sending a request to delete a record
   const handleDelete = async () => {
     try {
       await axiosInstance.delete(`/costs/${cost._id}`, {
@@ -35,6 +36,7 @@ export default function SingleCost() {
     } catch (err) {}
   };
 
+  // Sending a request to update a record
   const handleUpdate = async () => {
     try {
       await axiosInstance.put(`/costs/${cost._id}`, {

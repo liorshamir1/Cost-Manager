@@ -16,6 +16,7 @@ export default function Settings() {
 
   const { user, dispatch } = useContext(Context);
 
+  // Sends a request to the server to update details
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch({ type: "UPDATE_START" });

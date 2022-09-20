@@ -11,6 +11,7 @@ export default function Register() {
   const [birthday, setbirthday] = useState("");
   const [error, setError] = useState(false);
 
+  // Sends a request to the server for registration and executes only if all fields are correct
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(false);

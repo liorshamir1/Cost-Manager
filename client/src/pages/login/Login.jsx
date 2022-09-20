@@ -10,6 +10,7 @@ export default function Login() {
   const { dispatch, isFetching } = useContext(Context);
   const [show, setshow] = useState(false);
 
+  // Sends a request to the server to connect and connects only if we have an existing user
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
